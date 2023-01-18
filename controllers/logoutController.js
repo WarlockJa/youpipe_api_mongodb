@@ -16,7 +16,7 @@ const handleLogout = async (req, res) => {
     // delete refreshToken in the DB
     const result = await User.updateOne({ _id: foundUser._id }, {$set: { refreshToken: null }});
 
-    res.clearCookie('youpipe', { httpOnly: true }); // , sameSite:'None', secure: true
+    res.clearCookie('youpipe', { httpOnly: true, sameSite:'None', secure: true });
     res.sendStatus(204);
 }
 

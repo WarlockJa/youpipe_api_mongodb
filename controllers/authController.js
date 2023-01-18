@@ -35,7 +35,7 @@ const handleLogin = async (req, res) => {
         await foundUser.save();
 
         // refresh token cookie send as httpOnly so it cannot be accessed by JS. Sent with every request
-        res.cookie('youpipe', refreshToken, { httpOnly: true, maxAge: 24 * 60 * 60 * 1000 }) //Path: '/refresh', sameSite: 'None', secure: true, 
+        res.cookie('youpipe', refreshToken, { httpOnly: true, sameSite: 'None', secure: true, maxAge: 24 * 60 * 60 * 1000 }) //Path: '/refresh', sameSite: 'None', secure: true, 
         // keep only in memory
         res.json({ accessToken });
     } else {

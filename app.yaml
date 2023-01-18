@@ -1,0 +1,7 @@
+runtime: nodejs18
+env_variables:
+  MONGODB_URI: mongodb+srv://youpipe-admin:6O9QsEKydcU96GLx@cluster0.o8f7swa.mongodb.net/youpipe?retryWrites=true&w=majority
+  ACCESS_TOKEN_SECRET: 19d5cc3a3733934fce45513cc7232bb359489eae4fe0f1bbdc3e216350ba6ef4d32a02a0f63ffba92c1d10b63b0f99463d7649e5a36438e62c924b616b313461
+  REFRESH_TOKEN_SECRET: 7bd5e8a859a2d8c6b6adb1262698b4e9db8753c0bbc89323770395b853ad06c0190bb1e18bc8643086950ea9cbc0f7a1a704eb73c77c926f916dc9f8d6d0236f
+  ALLOWED_ORIGIN_FRONT_END: https://youpipe.warlockja.ru
+  ALLOWED_ORIGIN_DEV: http://81.214.106.30

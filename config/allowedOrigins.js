@@ -1,8 +1,6 @@
 const allowedOrigins = [
-    'https://warlockja.ru',
-    'http://127.0.0.1:3000',
-    'http://localhost:3500',
-    'http://localhost:3000'
+    process.env.ALLOWED_ORIGIN_FRONT_END,
+    process.env.ALLOWED_ORIGIN_DEV
 ];
 
 module.exports = allowedOrigins;
