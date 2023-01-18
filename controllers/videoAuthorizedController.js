@@ -1,11 +1,13 @@
 const Video = require('../model/Video');
+const User = require('../model/User');
 
 const createNewVideo = async (req, res) => {
     if(!req.user || !req.body.title || !req.body.image) {
-        return res.status(400).json({'message': 'Author, video title, and video image are required'})
+        return res.status(400).json({'message': 'Author, video title, and video image are required'});
     }
 
-    const newVideo = { author: req.user, ...req.body }
+    const userData = await User.findOne({ name: req.name }, { _id: 0, avatar: 1 });
+    const newVideo = { author: req.user, avatar: userData.avatar, ...req.body };
 
     Video.create(newVideo, (err, result) => {
         if(err) {
