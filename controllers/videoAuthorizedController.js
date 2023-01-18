@@ -6,7 +6,7 @@ const createNewVideo = async (req, res) => {
         return res.status(400).json({'message': 'Author, video title, and video image are required'});
     }
 
-    const userData = await User.findOne({ name: req.name }, { _id: 0, avatar: 1 });
+    const userData = await User.findOne({ name: req.user }, { _id: 0, avatar: 1 }).exec();
     const newVideo = { author: req.user, avatar: userData.avatar, ...req.body };
 
     Video.create(newVideo, (err, result) => {
