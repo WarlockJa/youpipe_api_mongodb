@@ -7,10 +7,10 @@ This is an API for the project YouPipe(https://github.com/WarlockJa/youpipe) wri
 2) rename file "env_template" into ".env" file and replace its content with your data
   MONGODB_URI='MongoDB connect line example: mongodb+srv://<YOUR_MONGOB_CONNECT_DATA>.mongodb.net/<YOURPROJECT>?retryWrites=true&w=majority '
   DB requirements: 
-  1 You need to be registered on "https://www.mongodb.com/"
-  2 Created cluster in MongoDB
-  3 Created DB 'youpipe'
-  4 Created DB collections: 'comments', 'users', 'videos'. Their structure can be found in this project catalogue 'model'.
+  a) You need to be registered on "https://www.mongodb.com/"
+  b) Created cluster in MongoDB
+  c) Created DB 'youpipe'
+  d) Created DB collections: 'comments', 'users', 'videos'. Their structure can be found in this project catalogue 'model'.
   
   PORT='Local port number for development mode'
   
