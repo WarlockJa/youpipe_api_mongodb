@@ -1,0 +1,6 @@
+MONGODB_URI='MongoDB connect line example: mongodb+srv://<YOUR_MONGOB_CONNECT_DATA>.mongodb.net/<YOURPROJECT>?retryWrites=true&w=majority '
+PORT='Local port number for development mode'
+ACCESS_TOKEN_SECRET='Generated JWT Access Token'
+REFRESH_TOKEN_SECRET='Generated JWT Refresh Token'
+ALLOWED_ORIGIN_FRONT_END='Allowed origing URL exmaple https://youpipe.warlockja.ru'
+ALLOWED_ORIGIN_DEV='local development address'

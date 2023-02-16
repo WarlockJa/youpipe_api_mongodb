@@ -10,10 +10,6 @@ const credentials = require('./middleware/credentials');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-//testing
-// app.use(cors());
-
-
 // Connect to monogDB
 connectDB();
 
@@ -33,7 +29,7 @@ app.use('/commentUnauthorized', require('./routes/commentUnauthorized'));
 app.use('/auth', require('./routes/auth'));
 app.use('/logout', require('./routes/logout'));
 app.use('/refresh', require('./routes/refresh'));
-// // passing all routes that can be accessed without JWT
+// passing all routes that can be accessed without JWT
 app.use(verifyJWT);
 app.use('/register', require('./routes/register'));
 app.use('/userAuthorized', require('./routes/userAuthorized'));

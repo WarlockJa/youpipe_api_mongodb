@@ -15,7 +15,7 @@ const getAuthorizedUserData = async (req, res) => {
 // spam protection
 // several collections may need to finish updating before another request is permitted
 // to ensure this user name is added to the cancelArray on request start and removed at the request complete
-// so only one request is being processed at the same time
+// so only one request by the same user is being processed at the same time
 const cancelState = [];
 // update user data and associated collections (e.g. avatar field) if necessary
 const updateUserData = async (req, res) => {

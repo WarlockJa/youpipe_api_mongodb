@@ -5,8 +5,8 @@ const handleNewUser = async (req, res) => {
     const { user, fullName, password } = req.body;
     if(!user || !fullName || !password) return res.status(400).json({ 'message': 'User name, full name, and password are required'});
     
-    // const duplicate = await User.findOne({ name: user }).exec();
-    // if(duplicate) return res.sendStatus(409); //conflict
+    const duplicate = await User.findOne({ name: user }).exec();
+    if(duplicate) return res.sendStatus(409); //conflict
 
     try {
         // encrypt the password
@@ -17,8 +17,6 @@ const handleNewUser = async (req, res) => {
             "fullname": fullName,
             "password": hashedPassword
         });
-
-        console.log(result)
 
         res.status(201).json({ 'success': `New user ${user} created!` })
     } catch(err) {
