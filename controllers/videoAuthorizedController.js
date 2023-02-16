@@ -2,7 +2,7 @@ const Video = require('../model/Video');
 const User = require('../model/User');
 
 const createNewVideo = async (req, res) => {
-    if(!req.user || !req.body.title || !req.body.image) {
+    if(!req.user || !req.body.title || !req.body.image || !req.body.previewImage) {
         return res.status(400).json({'message': 'Author, video title, and video image are required'});
     }
 

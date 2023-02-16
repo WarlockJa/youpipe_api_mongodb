@@ -39,6 +39,10 @@ const videoSchema = new Schema({
     image: {
         type: String,
         required: true
+    },
+    previewImage: {
+        type: String,
+        required: true
     }
 })
 
