@@ -1,5 +1,5 @@
 # About
-This is an API for the project YouPipe written with NextJS 18. It processes requests to MongoDB allowed by CORS list of origins and JWT authorization data of the requests.
+This is an API for the project YouPipe(https://github.com/WarlockJa/youpipe) written with NextJS 18. It processes requests to MongoDB allowed by CORS list of origins and JWT authorization data of the requests.
 
 # Install procedure
 
